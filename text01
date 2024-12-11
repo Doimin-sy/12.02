@@ -1,0 +1,63 @@
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+    // 변수  variable
+    // 6;
+    // 7;
+    /* 
+    ~~~~~~~~
+    */
+    "a";
+    'a';
+    int a = 5;
+    double b = 6;
+    printf("hi plz\n"); //문자열 출력 코드
+    printf("%d\n",a); //   a의 메모리 주소 찾아가는 코드
+    //  %d는  a에 있는 값이 할당되어 출력한다.
+    printf("%x\n",&a); // a 가 가르키는 메모리주소를 출력
+    // byte , int(4byte), long(4byte),longlong(8byte) 
+    // 실수 ,  float , double(기본값)
+// 3.14(double) - 8byte , 3.14f(float type)-4byte
+// 문자 char -1byte 
+/*VCS 
+compiler : mingw
+c 드라이브에서 경로 mingw64 bin 
+시스템 고급설정에서 고급에서 환경변수 , 경로에서 경로 추가
+
+int integer  정수 4byte =32bit
+8bit = 1byte
+
+문자표현의 최소단위 1byte - 아스키코드 0~127 , 2^7
+
+c언어에서의 포인터
+변수는 해당 주소를 가르키고있다.*/
+char abl = 'a';
+printf("%d\n",abl+1);
+printf("%c\n",abl+1);
+printf("%c\n",100);
+// %은 나머지를 구하는것
+printf("%d\n",3/5); // 정수정수연산은 정수가 나옴
+printf("%f\n",3.0/5); // 실수 실수연산은 실수가 나옴
+printf("%d\n",3%5);
+
+//비교연산  ture , false c언어에서는 없음 ,,  true== 1 false == 0
+//  > < >= <= == !=
+printf("%d\n",3>5);//0
+printf("%d\n",3<5);//1
+printf("%d\n",3==3);//1
+printf("%d\n",3!=3);//0
+printf("%d\n",(3==3)+(5>2));//2
+int f = 3+4;
+//논리연산
+/*1&&1=1
+0&&1=0
+1&&0=0
+0&&0=0
+1||1=1
+1||0=1
+0||1=1
+0||0=0
+*/
+
+return 0;
+}
