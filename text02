@@ -1,0 +1,52 @@
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+    //  변수 - 문자형식, 메모리주소
+    // 변수타입 - int , char
+    // 산술연산 + - * / %
+    // 비교연산 >< >= <= == !=
+    // 논리연산 && || !
+    // 논리값 true = 1 false = 0
+    /*  
+    비트연산 (2진수로 계산)
+    &(and) , |(or) , ~(not) , ^(xor)
+    ^(xor) - t^t = f ,t^f = t
+    */ 
+   printf("%d\n",3&7);
+   printf("%d\n",7|11);
+   printf("%d\n",14&16);
+   printf("%d\n",14^16);
+   // 쉬프트 연산 >> 오른쪽 쉬프트 << 왼쪽 쉬프트
+   printf("%d\n",8>>2);
+   printf("%d\n",9<<2);
+   printf("%d\n",17>>3);
+   printf("%d\n",22>>2);
+    // 이항연산
+    int  i = 10;
+    i = i + 2;
+    /*
+    i+=2;  i=i+2
+    i-=3;  i=i-3
+    i/=2;  i=i/2
+    i%=3;  i=i%3
+    i+=1; i++ , ++i
+    i-=1; i-- , --i
+    */
+    printf("%d\n",i);
+    int f=0;
+    printf("f값 : %d\n",f++);
+    printf("f값 : %d\n",f);
+    printf("f값 : %d\n",++f);
+    printf("f값 : %d\n",f);
+    printf("f값 : %d\n",f--);
+    printf("f값 : %d\n",f);
+    printf("f값 : %d\n",2+(++f));
+    //삼항연산
+    printf("%d\n",1?100:200); //true 전자 출력
+    printf("%d\n",0?100:200); //false 후자출력
+    printf("%d\n",2?100:200);
+
+
+
+    return 0;
+}
