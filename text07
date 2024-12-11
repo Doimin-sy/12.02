@@ -1,0 +1,43 @@
+#include <stdio.h>
+void * 떡방아(char * 쌀,char * 물,char * 소금,char *부재료);
+int sumn(int a,int b);
+int minus(int a,int b);
+int recusiveFun(int a);
+
+int main(int argc, char const *argv[])
+{
+    // 함수-기능, 기계, 동사
+    떡방아("찹쌀","광천수","천일염","꿀");
+    떡방아("현미쌀","광천수","천일염","꿀");
+    int res = sumn(61,16);
+    printf("%d\n",res);
+    printf("%d\n",sumn(1,5)+8);
+    int ras = minus(11,1);
+    printf("%d\n",ras);
+    printf("%d\n",recusiveFun(100));
+    return 0;
+}
+void * 떡방아(char * 쌀,char * 물,char * 소금,char *부재료)
+{
+    printf("%s을 빻습니다.\n",쌀);
+    printf("%s을 %s와 섞어요\n",쌀,물);
+    printf("%s을 뿌립니다.\n",소금);
+    printf("%s를 버무립니다.\n",부재료);
+    printf("%s를 섞은 %s떡을 만들었습니다.맛있게 드세요.\n",부재료,쌀);
+
+
+}
+int sumn(int a,int b)
+{
+    return a+minus(a,b);
+
+}
+int minus(int a,int b)
+{
+    return a-b;
+}
+int recusiveFun(int a)  //재귀함수 
+{
+    if(a<=0) return 0;
+    return a+recusiveFun(a-1);
+}
