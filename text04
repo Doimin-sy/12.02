@@ -1,0 +1,69 @@
+#include <stdio.h>
+int main(int argc, char const *argv[])
+{
+    // int userInput;
+    // printf("%s\n","당신의 점수를 입력하세요");
+    // scanf("%d",&userInput);// scanf는 주소값을 넣어줘야한다.
+    // printf("당신의 점수는%d\n",userInput);
+    // if(userInput>=90) {
+    //     if(userInput>=95){
+    //         printf("A++");
+    //     }
+    //     else{
+    //     printf("A");
+    //     }
+    // }else if(userInput>=80)
+    // {
+    //     if(userInput>=85){
+    //         printf("B++");
+    //     }
+    //         else{
+    //     printf("B");
+    //         }
+
+    // }else if(userInput>=70)
+    // {
+    //     printf("C");}
+    //     else if(userInput>=60)
+    //     {
+    //     printf("D");}
+    //     else{
+    //         printf("불합격입니다");
+
+    //     }
+    //     printf("\n");
+        // 매칭문
+        // switch(매칭문){case 매칭 : }
+        // char userInput[10];
+        // printf("%c\n","문자를입력하세요");
+        // scanf("%c\n",&userInput);
+        // char aa = 'userInput';
+        // switch(aa) {
+        //     case 'a' : printf("%s\n","소문자 a입니다"); break;
+        //     case 'b' : printf("%s\n","소문자 b입니다"); break;
+        //     case 'c' : printf("%s\n","소문자 c입니다"); break;
+        //     case 'd' : printf("%s\n","소문자 d입니다"); break;
+        //     default : printf("%s\n","매칭되지 않는 문자입니다"); break;
+        //
+    //}
+        char cc = 'b';
+        switch(cc) {
+            case 'a' : cc++;
+            case 'b' : cc++; 
+            case 'c' : cc++;
+            case 'd' : cc++; break;
+            default : cc++;
+        }
+        printf("%c\n",cc);
+
+        char dd = 'a';
+        switch(dd) {
+        case 'a' : case 'b' : dd++;
+        case 'c' : case 'd' : dd--; 
+        default : dd++; break;
+        }
+        printf("%c\n",dd);
+
+        return 0;
+        
+}
