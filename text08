@@ -1,0 +1,43 @@
+#include <stdio.h>
+int lengthString(char * text);
+int main(int argc, char const *argv[])
+{
+    // 2차원배열 , 문자열
+    int arr[2][3] = {{1,2,3},{4,5,6}};
+    printf("%d\n",arr[0][1]);
+    printf("%d\n",*(*(arr+1)+1));
+    printf("%d\n",*(*arr+4)); // 배열은 연달아 존재
+    int * a = *arr;
+    int * b = *(arr+1);
+    *(a+1)=20;
+    *b = 10;
+    int sum=0;
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++){
+            sum+=arr[i][j];
+        }
+    }
+    printf("%d\n",sum);
+    char st[] = {'h','e','l','l','o','\0'}; //  null
+    char stt[] = "hello";
+    char * stts = "hello";
+    printf("%c\n",stt[1]);
+    printf("%s\n",&stt[1]); //문자열 배열은 주소를 부르면 뒤로 다 출력 !!
+    printf("%s\n",st+3);
+    printf("%c\n",*(stt+2));
+    printf("%c\n",*stt+2); // h i !!!! j !!!!
+    printf("%d\n",lengthString("hello i go to home "));
+    return 0;
+}
+int lengthString(char * text)  // text는 주소가 들어간다.
+{
+    int len = 0;
+    while(*text!='\0')
+    {
+        len++;
+        text++;
+    }
+    return len;
+
+}
