@@ -1,0 +1,36 @@
+#include <stdio.h>
+struct Book //  Book 은  char int char 의 복합 타입이라 생각
+{
+    char * title;
+    int price;
+    char * auth;
+};
+typedef struct 
+{
+    struct Book stbook[3];
+}Store;
+
+int main(int argc, char const *argv[])
+{
+    // 구조체 struct
+    struct Book book1 = {"피노키오",3000,"이영광"};
+    struct Book book2 = {.price=1000,.title="피리부는 사나이",.auth="방랑자"};//구조체는 .로 부른다.
+    printf("%s책의가격은 %d 저자는 %s이다.\n",book1.title,book1.price,book1.auth);
+    printf("%s책의가격은 %d 저자는 %s이다.\n",book2.title,book2.price,book2.auth);
+    struct Book * book = &book2;
+    printf("%s 책\n",(*book).title); // 구조체주소에서 .으로 안되기때문에 구조체로접근.
+    printf("저자는%s\n",book->auth); //구조체 주소에서는 화살표로 접근가능
+    book->auth="화가나";
+    printf("저자는%s\n",book->auth);
+    Store store;
+    store.stbook[0].title="장군의 아들";
+    store.stbook[0].price=6000;
+    store.stbook->auth="단비";
+    store.stbook[1].title="밤비";
+    (store.stbook+1)->price=7000;
+    (store.stbook+1)->auth="배고동";
+    for(int i=0;i<2;i++){
+        printf("제목 %s 저자%s 가격%d\n",(store.stbook+i)->title,(store.stbook+i)->auth,(store.stbook+i)->price);
+    }
+    return 0;
+}
